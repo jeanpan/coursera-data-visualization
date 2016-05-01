@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coursera Data Visualization Programming Assignment 1</title>
+  <style>
+
+  body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+  }
+
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 30px 60px 30px;
+  }
+
+  a {
+    color: #ff4e4e;
+    text-decoration: none;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+  }
+
+  a:hover {
+    color: #ffa74e;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li p:first-child {
+    font-weight: bold;
+  }
+
+  #data {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  /*
+  .x.axis path {
+    display: none;
+  }
+  */
+
+  .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>The Increasing Global Temperature</h1>
+
+    <h2>Coursera Data Visualization Project 1</h2>
+
+    <h3>Created by <a href="https://github.com/jeanpan" target="_blank">Jean Pan</a></h3>
+
+    <p>This is a simple data visualization exercise from Coursera Data Visualization course.</p>
+    <p>The data used in this assignment is <a href="http://data.giss.nasa.gov/gistemp/" target="_blank">GISTEMP</a> data from NASA.</p>
+    <p>The visualization tool I'm using is <a href="https://d3js.org/" target="_blank">D3.js</a>.</p>
+
+    <div id="data"></div>
+
+    <div class="content">
+
+      <div class="section">
+        <h2>Explanation</h2>
+
+        <p>This graph visualizes the <a href="http://data.giss.nasa.gov/gistemp/" target="_blank">GISTEMP</a> data for the Globe and the North and South Hemispheres through all the given years ( 1880 - 2014 ).
+          The Blue line is for the Globe, the Orange line describes the data for the Northern Hemisphere and the Green for the South Hemisphere.</p>
+
+        <p>From the resulting graph, although there is a little decreasing during 19th century, we can see that the overall trend of global temperature is increasing.
+          Both north and south follow the same trend as the global, but we can find the south increases smoother than the north. </p>
+      </div>
+
+      <div class="section">
+        <h2>Question</h2>
+        <ul>
+          <li>
+            <p>1. What are your X and Y axes?</p>
+            <p>X axes is the average temperature (ºF) and Y axes is the Year which is from 1880 to 2014 according to the data set.</p>
+          </li>
+          <li>
+            <p>2. Did you use a subset of the data? If so, what was it?</p>
+            <p>Yes. I used the subset of data for globe, north and south.</p>
+          </li>
+          <li>
+            <p>3. Are there any particular aspects of your visualization to which you would like to bring attention ? </p>
+            <p>The overall global temperature is increasing, and the south increases smoother than the north.</p>
+          </li>
+          <li>
+            <p>4. What do you think the data, and your visualization, shows?</p>
+            <p>From the data visualization, we can know how the temperature changes with time and the trend of global temperature.</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="js/plot.js"></script>
+</body>
+</html>
